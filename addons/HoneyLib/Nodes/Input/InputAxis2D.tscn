@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/HoneyLib/Nodes/Input/InputAxis2D.gd" type="Script" id=1]
+
+[node name="InputAxis2D" type="Node"]
+script = ExtResource( 1 )
+input_mode = 0
+input_list = [ "none" ]
+move_left = "none"
+move_right = "none"
+actor_path = NodePath("..")
+registry_type = 1
+enabled = true
+tags = [  ]

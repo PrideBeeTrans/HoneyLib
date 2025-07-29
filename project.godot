@@ -1,0 +1,178 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "CauseType",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Constants/CauseType.gd"
+}, {
+"base": "Node",
+"class": "Component",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Core/Component.gd"
+}, {
+"base": "Node2D",
+"class": "Component2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Core/Component2D.gd"
+}, {
+"base": "Area2D",
+"class": "ComponentArea2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Core/ComponentArea2D.gd"
+}, {
+"base": "Control",
+"class": "ComponentControl",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Core/ComponentControl.gd"
+}, {
+"base": "PhysicsMotion2D",
+"class": "DirectionalMotion2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Physics/DirectionalMotion2D.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "EntityBody2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Physics/EntityBody2D.gd"
+}, {
+"base": "Component",
+"class": "GravityApplier2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Physics/GravityApplier2D.gd"
+}, {
+"base": "Reference",
+"class": "GravitySettings",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/Physics/GravitySettings.gd"
+}, {
+"base": "Reference",
+"class": "HealthStats",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Combat/HealthStats.gd"
+}, {
+"base": "ComponentArea2D",
+"class": "HurtBox2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Combat/HurtBox2D.gd"
+}, {
+"base": "Component",
+"class": "InputAxis2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Input/InputAxis2D.gd"
+}, {
+"base": "Component2D",
+"class": "KnockBack2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Physics/KnockBack2D.gd"
+}, {
+"base": "Reference",
+"class": "MathUtils",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Utils/MathUtils.gd"
+}, {
+"base": "Reference",
+"class": "ModifiableResource",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/Modifiers/ModifiableResource.gd"
+}, {
+"base": "Reference",
+"class": "ModifierData",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/Modifiers/ModifierData.gd"
+}, {
+"base": "Reference",
+"class": "MoveSettings",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/Physics/MoveSettings.gd"
+}, {
+"base": "Component",
+"class": "PhysicsMotion2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Physics/PhysicsMotion2D.gd"
+}, {
+"base": "Object",
+"class": "PropertiesList",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Utils/PropertiesList.gd"
+}, {
+"base": "PhysicsMotion2D",
+"class": "SideScrollerMotion2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Physics/SideScrollerMotion2D.gd"
+}, {
+"base": "Reference",
+"class": "StartingStats",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/Combat/StartingStats.gd"
+}, {
+"base": "Reference",
+"class": "TraitBase",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/System/TraitBase.gd"
+}, {
+"base": "Reference",
+"class": "TraitSystem",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/System/TraitSystem.gd"
+}, {
+"base": "Component",
+"class": "ValueResource",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Core/ValueResource.gd"
+} ]
+_global_script_class_icons={
+"CauseType": "",
+"Component": "res://addons/HoneyLib/Icons/Component.svg",
+"Component2D": "res://addons/HoneyLib/Icons/Component2D.svg",
+"ComponentArea2D": "",
+"ComponentControl": "res://addons/HoneyLib/Icons/ComponentControl.svg",
+"DirectionalMotion2D": "res://addons/HoneyLib/Icons/Physics/DirectionalMotion2D.svg",
+"EntityBody2D": "res://addons/HoneyLib/Icons/Physics/EntityBody2D.svg",
+"GravityApplier2D": "",
+"GravitySettings": "",
+"HealthStats": "",
+"HurtBox2D": "res://addons/HoneyLib/Icons/Combat/HurtBox2D.svg",
+"InputAxis2D": "res://addons/HoneyLib/Icons/InputAxis2D.svg",
+"KnockBack2D": "res://addons/HoneyLib/Icons/Physics/KnockBack2D.svg",
+"MathUtils": "",
+"ModifiableResource": "",
+"ModifierData": "",
+"MoveSettings": "",
+"PhysicsMotion2D": "res://addons/HoneyLib/Icons/Physics/PhysicsMotion2D.svg",
+"PropertiesList": "",
+"SideScrollerMotion2D": "res://addons/HoneyLib/Icons/Physics/SideScrollerMotion2D.svg",
+"StartingStats": "",
+"TraitBase": "",
+"TraitSystem": "",
+"ValueResource": ""
+}
+
+[application]
+
+config/name="Honey Lib"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/HoneyLib/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

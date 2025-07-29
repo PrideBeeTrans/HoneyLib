@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/HoneyLib/Nodes/Physics/KnockBack2D.gd" type="Script" id=1]
+
+[node name="KnockBack2D" type="Node2D"]
+script = ExtResource( 1 )
+knockback_force = 150.0
+damage_direction_scale = null
+additional_vector = Vector2( 0, 0 )
+should_reset_velocity = null
+actor_path = NodePath("..")
+registry_type = 1
+enabled = true
+tags = [  ]
+resource_map = null

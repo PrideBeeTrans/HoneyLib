@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="12mm"
+   height="12mm"
+   viewBox="0 0 12 12"
+   version="1.1"
+   id="svg3506"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="HealthStats.svg">
+  <defs
+     id="defs3500" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.654207"
+     inkscape:cx="26.287174"
+     inkscape:cy="1.2358288"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g882"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata3503">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-285)">
+    <g
+       id="g882"
+       transform="translate(0.66385881,-0.7296564)">
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.13532686;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 13.169922 2.5917969 C 9.9600239 2.591778 6.7505933 3.8216657 4.2910156 6.28125 C -0.085262062 10.657505 -0.55878261 17.404089 2.8515625 22.304688 L 7.0039062 22.304688 L 13.494141 11.076172 L 16.572266 22.554688 L 16.697266 22.554688 L 21.355469 9.703125 L 24.484375 19.705078 L 27.931641 11.134766 L 33.623047 22.089844 L 42.884766 22.089844 C 46.130796 17.208772 45.598497 10.592614 41.287109 6.28125 C 36.367957 1.3620815 28.448451 1.3620815 23.529297 6.28125 L 22.789062 7.0214844 L 22.048828 6.28125 C 19.58925 3.8216657 16.37982 2.5918158 13.169922 2.5917969 z M 28.279297 18.369141 L 24.130859 28.689453 L 21.148438 19.152344 L 18.816406 25.582031 L 14.246094 25.582031 L 12.458984 18.908203 L 8.7539062 25.330078 L 5.5820312 25.330078 L 22.789062 42.539062 L 40.210938 25.117188 L 31.785156 25.117188 L 28.279297 18.369141 z "
+         transform="matrix(0.26458333,0,0,0.26458333,-0.66385881,285.72966)"
+         id="path847" />
+    </g>
+  </g>
+</svg>

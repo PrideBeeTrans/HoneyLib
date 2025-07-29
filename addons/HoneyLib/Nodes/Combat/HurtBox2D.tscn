@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/HoneyLib/Nodes/Combat/HurtBox2D.gd" type="Script" id=1]
+
+[node name="HurtBox2D" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource( 1 )
+on_hurt = null
+on_death = null
+actor_path = NodePath("..")
+registry_type = 1
+enabled = true
+tags = [  ]
+resource_map = null
