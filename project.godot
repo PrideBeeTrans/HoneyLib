@@ -114,6 +114,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Resources/Combat/StartingStats.gd"
 }, {
+"base": "Component",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/System/StateMachine.gd"
+}, {
 "base": "Reference",
 "class": "TraitBase",
 "language": "GDScript",
@@ -151,6 +156,7 @@ _global_script_class_icons={
 "PropertiesList": "",
 "SideScrollerMotion2D": "res://addons/HoneyLib/Icons/Physics/SideScrollerMotion2D.svg",
 "StartingStats": "",
+"StateMachine": "res://addons/HoneyLib/Icons/System/StateMachine.svg",
 "TraitBase": "",
 "TraitSystem": "",
 "ValueResource": ""

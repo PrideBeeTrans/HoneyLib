@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StateMachine.svg-c5aeae4ddc6f8e3363ddff9b25158d0c.stex"
+path="res://.import/StateMachine.svg-2faa6660d99845d2562841973053c02b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/HoneyLib/Icons/StateMachine.svg"
-dest_files=[ "res://.import/StateMachine.svg-c5aeae4ddc6f8e3363ddff9b25158d0c.stex" ]
+source_file="res://addons/HoneyLib/Icons/System/StateMachine.svg"
+dest_files=[ "res://.import/StateMachine.svg-2faa6660d99845d2562841973053c02b.stex" ]
 
 [params]
 
