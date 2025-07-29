@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DirectionalMotion2D.svg-c3f588f39e189a399a060696bdc0685a.stex"
+path="res://.import/ScreenContainer.svg-12448352c726d1eeecdc4f33b1cdc8c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/HoneyLib/Icons/DirectionalMotion2D.svg"
-dest_files=[ "res://.import/DirectionalMotion2D.svg-c3f588f39e189a399a060696bdc0685a.stex" ]
+source_file="res://addons/HoneyLib/Icons/UI/ScreenContainer.svg"
+dest_files=[ "res://.import/ScreenContainer.svg-12448352c726d1eeecdc4f33b1cdc8c6.stex" ]
 
 [params]
 

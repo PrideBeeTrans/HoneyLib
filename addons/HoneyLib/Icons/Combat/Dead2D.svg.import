@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EntityBody2D.svg-467475ddbb4e2cc885b7f52443d2ece0.stex"
+path="res://.import/Dead2D.svg-f738f93d1788b6d72b81528893b7bc7c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/HoneyLib/Icons/EntityBody2D.svg"
-dest_files=[ "res://.import/EntityBody2D.svg-467475ddbb4e2cc885b7f52443d2ece0.stex" ]
+source_file="res://addons/HoneyLib/Icons/Combat/Dead2D.svg"
+dest_files=[ "res://.import/Dead2D.svg-f738f93d1788b6d72b81528893b7bc7c.stex" ]
 
 [params]
 

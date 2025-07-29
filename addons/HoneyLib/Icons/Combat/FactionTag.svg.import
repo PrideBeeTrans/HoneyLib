@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EntityBody2D.svg-467475ddbb4e2cc885b7f52443d2ece0.stex"
+path="res://.import/FactionTag.svg-2180c3c1ad32f8117a9b97d7f2e8aee5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/HoneyLib/Icons/EntityBody2D.svg"
-dest_files=[ "res://.import/EntityBody2D.svg-467475ddbb4e2cc885b7f52443d2ece0.stex" ]
+source_file="res://addons/HoneyLib/Icons/Combat/FactionTag.svg"
+dest_files=[ "res://.import/FactionTag.svg-2180c3c1ad32f8117a9b97d7f2e8aee5.stex" ]
 
 [params]
 
