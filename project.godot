@@ -49,12 +49,12 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Physics/GravityApplier2D.gd"
 }, {
-"base": "Reference",
+"base": "ModifiableResource",
 "class": "GravitySettings",
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Resources/Physics/GravitySettings.gd"
 }, {
-"base": "Reference",
+"base": "ValueResource",
 "class": "HealthStats",
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Combat/HealthStats.gd"
@@ -139,7 +139,7 @@ _global_script_class_icons={
 "EntityBody2D": "res://addons/HoneyLib/Icons/Physics/EntityBody2D.svg",
 "GravityApplier2D": "",
 "GravitySettings": "",
-"HealthStats": "",
+"HealthStats": "res://addons/HoneyLib/Icons/Combat/HealthStats.svg",
 "HurtBox2D": "res://addons/HoneyLib/Icons/Combat/HurtBox2D.svg",
 "InputAxis2D": "res://addons/HoneyLib/Icons/InputAxis2D.svg",
 "KnockBack2D": "res://addons/HoneyLib/Icons/Physics/KnockBack2D.svg",

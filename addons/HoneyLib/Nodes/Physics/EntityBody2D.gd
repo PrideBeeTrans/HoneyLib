@@ -104,6 +104,14 @@ func slide_along_wall(normal: Vector2) -> void:
 
 ## --- Utility Checks ---
 
+## Returns true if is jumping
+func is_jumping() -> bool:
+	return get_velocity_y() < 0.0
+
+## Returns true if is falling
+func is_falling() -> bool:
+	return get_velocity_y() > 0.0
+
 ## Returns true if floor is too steep.
 func is_on_steep_slope(max_angle: float = get_floor_max_angle()) -> bool:
 	return is_on_floor() and get_floor_normal().angle_to(get_up_direction()) > max_angle

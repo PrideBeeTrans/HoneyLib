@@ -4,6 +4,7 @@
 
 [node name="GravityApplier2D" type="Node"]
 script = ExtResource( 1 )
+gravity_settings = null
 actor_path = NodePath("..")
 registry_type = 1
 enabled = true
