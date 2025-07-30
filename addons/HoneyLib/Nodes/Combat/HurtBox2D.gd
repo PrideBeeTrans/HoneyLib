@@ -7,6 +7,10 @@ onready var health_stats := get_component("HealthStats") as HealthStats
 
 
 func _ready() -> void:
+	connect("area_entered", self, "_on_area_entered")
+
+
+func _on_area_entered(area: Area2D) -> void:
 	pass
 
 

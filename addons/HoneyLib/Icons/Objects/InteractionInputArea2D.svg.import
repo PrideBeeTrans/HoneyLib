@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EntityBody2D.svg-899f1cc82b34be55cb6687c1814f6ad5.stex"
+path="res://.import/InteractionInputArea2D.svg-41e2d2c09b69d22623c6a3c9d5cd291a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/HoneyLib/Icons/Physics/EntityBody2D.svg"
-dest_files=[ "res://.import/EntityBody2D.svg-899f1cc82b34be55cb6687c1814f6ad5.stex" ]
+source_file="res://addons/HoneyLib/Icons/Objects/InteractionInputArea2D.svg"
+dest_files=[ "res://.import/InteractionInputArea2D.svg-41e2d2c09b69d22623c6a3c9d5cd291a.stex" ]
 
 [params]
 
