@@ -14,6 +14,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Constants/CauseType.gd"
 }, {
+"base": "ComponentArea2D",
+"class": "Collectible2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Objects/Collectible2D.gd"
+}, {
+"base": "ComponentArea2D",
+"class": "Collector2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Objects/Collector2D.gd"
+}, {
 "base": "Node",
 "class": "Component",
 "language": "GDScript",
@@ -94,6 +104,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Resources/Physics/MoveSettings.gd"
 }, {
+"base": "Resource",
+"class": "Payload",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Resources/Payload/Payload.gd"
+}, {
 "base": "Component",
 "class": "PhysicsMotion2D",
 "language": "GDScript",
@@ -136,6 +151,8 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "CauseType": "",
+"Collectible2D": "",
+"Collector2D": "",
 "Component": "res://addons/HoneyLib/Icons/Component.svg",
 "Component2D": "res://addons/HoneyLib/Icons/Component2D.svg",
 "ComponentArea2D": "",
@@ -152,6 +169,7 @@ _global_script_class_icons={
 "ModifiableResource": "",
 "ModifierData": "",
 "MoveSettings": "",
+"Payload": "",
 "PhysicsMotion2D": "res://addons/HoneyLib/Icons/Physics/PhysicsMotion2D.svg",
 "PropertiesList": "",
 "SideScrollerMotion2D": "res://addons/HoneyLib/Icons/Physics/SideScrollerMotion2D.svg",

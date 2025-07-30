@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/HoneyLib/Nodes/Objects/Collectible2D.gd" type="Script" id=1]
+
+[node name="Collectible2D" type="Area2D"]
+script = ExtResource( 1 )
+payload = null
+auto_remove = true
+actor_path = NodePath("..")
+registry_type = 1
+enabled = true
+tags = [  ]
+resource_map = null
