@@ -244,6 +244,8 @@ func get_class() -> String:
 
 func _get_configuration_warning() -> String:
 	var warning := ""
+	if get_owner() == null:
+		return warning
 	var has_directional := get_owner().find_node("DirectionalMotion2D") != null
 	var has_side_scroller := get_owner().find_node("SideScrollerMotion2D") != null
 	
@@ -255,11 +257,11 @@ func _get_configuration_warning() -> String:
 
 func _get_property_list() -> Array:
 	var properties := PropertiesList.create_property_list()
-	var has_directional := get_owner().find_node("DirectionalMotion2D") != null
-	var has_side_scroller := get_owner().find_node("SideScrollerMotion2D") != null
+	var has_directional : Node2D = get_owner().find_node("DirectionalMotion2D") != null if get_owner() != null else null
+	var has_side_scroller : Node2D = get_owner().find_node("SideScrollerMotion2D") != null if get_owner() != null else null
 	properties.add_category("Flippable2D")
 	properties.add_enum("facing_mode", "Disabled,Auto,Input Directional,Input SideScroller,Target,Mouse")
 	properties.add_enum("flip_axis", "Horizontal, Vertical,All")
-	if has_directional == true and has_side_scroller == true:
+	if has_directional != null and has_side_scroller != null:
 		properties.add_enum("motion_priority", "Auto,Directional,SideScroller")
 	return properties.get_properties()
