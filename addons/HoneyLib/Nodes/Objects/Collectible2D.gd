@@ -5,6 +5,12 @@ extends ComponentArea2D
 signal collected(collector)
 signal collection_denied(collector)
 
+const CATEGORY_NAME := "Collectible2D"
+const PROPERTY_PAYLOAD := "payload"
+const PROPERTY_AUTO_REMOVE := "auto_remove"
+
+const METHOD_EXECUTE := "execute"
+
 var auto_remove := true setget set_auto_remove,is_auto_remove
 var payload : Resource setget set_payload,get_payload
 
@@ -27,7 +33,7 @@ func collect(collector: Area2D) -> bool:
 
 
 func execute_payload(collector: Area2D) -> bool:
-	if get_payload() != null and get_payload().has_method("execute"):
+	if get_payload() != null and get_payload().has_method(METHOD_EXECUTE):
 		return get_payload().execute(self, collector)
 	return true
 
@@ -50,7 +56,7 @@ func get_payload() -> Resource:
 
 func _get_property_list() -> Array:
 	var properties := PropertiesList.create_property_list()
-	properties.add_category("Collectible2D")
-	properties.add_resource("payload", "Resource")
-	properties.add_property("auto_remove", TYPE_BOOL)
+	properties.add_category(CATEGORY_NAME)
+	properties.add_resource(PROPERTY_PAYLOAD, "Resource")
+	properties.add_property(PROPERTY_AUTO_REMOVE, TYPE_BOOL)
 	return properties.get_properties()
