@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/HoneyLib/Nodes/UI/ScreenContainer.gd" type="Script" id=2]
+
+[node name="ScreenContainer" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+initial_screen_path = NodePath("")
+actor_path = NodePath("..")
+registry_type = 1
+enabled = true
+tags = [  ]
+resource_map = null

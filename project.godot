@@ -154,6 +154,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Utils/PropertiesList.gd"
 }, {
+"base": "ComponentControl",
+"class": "Screen",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/UI/Screen.gd"
+}, {
+"base": "ComponentControl",
+"class": "ScreenContainer",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/UI/ScreenContainer.gd"
+}, {
 "base": "PhysicsMotion2D",
 "class": "SideScrollerMotion2D",
 "language": "GDScript",
@@ -214,6 +224,8 @@ _global_script_class_icons={
 "Payload": "",
 "PhysicsMotion2D": "res://addons/HoneyLib/Icons/Physics/PhysicsMotion2D.svg",
 "PropertiesList": "",
+"Screen": "",
+"ScreenContainer": "res://addons/HoneyLib/Icons/UI/ScreenContainer.svg",
 "SideScrollerMotion2D": "res://addons/HoneyLib/Icons/Physics/SideScrollerMotion2D.svg",
 "StartingStats": "",
 "StateMachine": "res://addons/HoneyLib/Icons/System/StateMachine.svg",
