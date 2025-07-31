@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/HoneyLib/Nodes/Visuals/GraphicsContainer2D.gd" type="Script" id=1]
+
+[node name="GraphicsContainer2D" type="Node2D"]
+scale = Vector2( 0.35, 0.35 )
+script = ExtResource( 1 )

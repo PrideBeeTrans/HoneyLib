@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Aim2D.svg-ce280f9a3c8b6fd257e0a29e61bf0a6a.stex"
+path="res://.import/Aim2D.svg-a5c3c2efe0db2e9849d3a78e259da6ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/HoneyLib/Icons/Aim2D.svg"
-dest_files=[ "res://.import/Aim2D.svg-ce280f9a3c8b6fd257e0a29e61bf0a6a.stex" ]
+source_file="res://addons/HoneyLib/Icons/Logic/Aim2D.svg"
+dest_files=[ "res://.import/Aim2D.svg-a5c3c2efe0db2e9849d3a78e259da6ba.stex" ]
 
 [params]
 
