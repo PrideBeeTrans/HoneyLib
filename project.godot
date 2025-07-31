@@ -69,11 +69,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/VFX/Gibbinator2D.gd"
 }, {
-"base": "Reference",
-"class": "GraphicsContainer2D",
-"language": "GDScript",
-"path": "res://addons/HoneyLib/Nodes/Visuals/GraphicsContainer2D.gd"
-}, {
 "base": "Component",
 "class": "GravityApplier2D",
 "language": "GDScript",
@@ -207,7 +202,6 @@ _global_script_class_icons={
 "EntityBody2D": "res://addons/HoneyLib/Icons/Physics/EntityBody2D.svg",
 "Flippable2D": "res://addons/HoneyLib/Icons/Visuals/Flippable2D.svg",
 "Gibbinator2D": "res://addons/HoneyLib/Icons/VFX/Gibbinator2D.svg",
-"GraphicsContainer2D": "",
 "GravityApplier2D": "",
 "GravitySettings": "",
 "HealthStats": "res://addons/HoneyLib/Icons/Combat/HealthStats.svg",
