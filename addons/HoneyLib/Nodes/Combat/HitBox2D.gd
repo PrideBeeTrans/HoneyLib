@@ -1,0 +1,3 @@
+tool
+class_name HitBox2D
+extends ComponentArea2D

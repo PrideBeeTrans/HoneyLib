@@ -54,6 +54,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Utils/ContextHelper.gd"
 }, {
+"base": "Component2D",
+"class": "Dead2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Combat/Dead2D.gd"
+}, {
 "base": "PhysicsMotion2D",
 "class": "DirectionalMotion2D",
 "language": "GDScript",
@@ -88,6 +93,11 @@ _global_script_classes=[ {
 "class": "HealthStats",
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Combat/HealthStats.gd"
+}, {
+"base": "ComponentArea2D",
+"class": "HitBox2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Combat/HitBox2D.gd"
 }, {
 "base": "ComponentArea2D",
 "class": "HurtBox2D",
@@ -209,6 +219,7 @@ _global_script_class_icons={
 "ComponentArea2D": "",
 "ComponentControl": "res://addons/HoneyLib/Icons/ComponentControl.svg",
 "ContextHelper": "",
+"Dead2D": "",
 "DirectionalMotion2D": "res://addons/HoneyLib/Icons/Physics/DirectionalMotion2D.svg",
 "EntityBody2D": "res://addons/HoneyLib/Icons/Physics/EntityBody2D.svg",
 "Flippable2D": "res://addons/HoneyLib/Icons/Visuals/Flippable2D.svg",
@@ -216,6 +227,7 @@ _global_script_class_icons={
 "GravityApplier2D": "",
 "GravitySettings": "",
 "HealthStats": "res://addons/HoneyLib/Icons/Combat/HealthStats.svg",
+"HitBox2D": "",
 "HurtBox2D": "res://addons/HoneyLib/Icons/Combat/HurtBox2D.svg",
 "InputAxis2D": "res://addons/HoneyLib/Icons/InputAxis2D.svg",
 "InteractionArea2D": "",

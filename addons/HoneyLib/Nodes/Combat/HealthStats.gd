@@ -10,6 +10,8 @@ const RESET_ON_CHANGE := true
 const KEEP_CURRENT_HEALTH := false
 
 signal stats_changed(new_stats)
+signal damage_taken(amount, source, reason)
+signal healed(amount, source, reason)
 
 ## Optional resource used to initialize health values.
 var starting_stats : Resource setget set_starting_stats,get_starting_stats
@@ -48,13 +50,15 @@ func reset_health(reason := CauseType.RESET_HEALTH) -> void:
 
 
 ## Applies damage to current health. Cannot go below zero.
-func take_damage(amount: int, reason := CauseType.DAMAGE) -> void:
+func take_damage(amount: int, source: Node = null, reason := CauseType.DAMAGE) -> void:
 	decrease(amount, reason)
+	emit_signal("damage_taken", amount, source, reason)
 
 
 ## Restores health by the given amount. Cannot exceed max health.
-func heal(amount: int, reason := CauseType.HEAL) -> void:
+func heal(amount: int, source: Node = null, reason := CauseType.HEAL) -> void:
 	increase(amount, reason)
+	emit_signal("healed", amount, source, reason)
 
 ## Reload life completely
 func restore_full_health(reason := CauseType.RESTORE_HEALTH) -> void:
