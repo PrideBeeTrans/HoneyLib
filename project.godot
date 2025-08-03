@@ -154,6 +154,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Utils/PropertiesList.gd"
 }, {
+"base": "Component2D",
+"class": "RenderGroup2D",
+"language": "GDScript",
+"path": "res://addons/HoneyLib/Nodes/Visuals/RenderGroup2D.gd"
+}, {
 "base": "ComponentControl",
 "class": "Screen",
 "language": "GDScript",
@@ -169,7 +174,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Physics/SideScrollerMotion2D.gd"
 }, {
-"base": "Reference",
+"base": "Resource",
 "class": "StartingStats",
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Resources/Combat/StartingStats.gd"
@@ -224,6 +229,7 @@ _global_script_class_icons={
 "Payload": "",
 "PhysicsMotion2D": "res://addons/HoneyLib/Icons/Physics/PhysicsMotion2D.svg",
 "PropertiesList": "",
+"RenderGroup2D": "",
 "Screen": "",
 "ScreenContainer": "res://addons/HoneyLib/Icons/UI/ScreenContainer.svg",
 "SideScrollerMotion2D": "res://addons/HoneyLib/Icons/Physics/SideScrollerMotion2D.svg",
@@ -238,6 +244,10 @@ _global_script_class_icons={
 
 config/name="Honey Lib"
 config/icon="res://icon.png"
+
+[autoload]
+
+EventBus="*res://addons/HoneyLib/Autoload/EventBus.gd"
 
 [editor_plugins]
 
