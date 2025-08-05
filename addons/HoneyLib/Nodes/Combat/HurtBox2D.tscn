@@ -6,8 +6,8 @@
 collision_layer = 0
 monitorable = false
 script = ExtResource( 1 )
+debug = false
 on_hurt = null
-on_death = null
 actor_path = NodePath("..")
 registry_type = 1
 enabled = true
