@@ -99,7 +99,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Combat/HitBox2D.gd"
 }, {
-"base": "Reference",
+"base": "Component2D",
 "class": "HitFlash2D",
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Combat/HitFlash2D.gd"

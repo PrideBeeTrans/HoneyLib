@@ -1,8 +1,27 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://addons/HoneyLib/Nodes/Combat/HitFlash2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 flash_color : hint_color = vec4(1.0);
+uniform float flash_modifier : hint_range(0.0, 1.0) = 0.0;
+
+void fragment(){
+	vec4 color = texture(TEXTURE, UV);
+	color.rgb = mix(color.rgb, flash_color.rgb, flash_modifier);
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/flash_color = Color( 1, 1, 1, 1 )
+shader_param/flash_modifier = 0.0
 
 [node name="HitFlash2D" type="Node2D"]
+material = SubResource( 2 )
 script = ExtResource( 1 )
 flash_color = Color( 1, 1, 1, 1 )
 flash_duration = 0.1
@@ -11,3 +30,7 @@ registry_type = 1
 enabled = true
 tags = [  ]
 resource_map = null
+
+[node name="Sprite" type="Sprite" parent="."]
+use_parent_material = true
+texture = ExtResource( 2 )
