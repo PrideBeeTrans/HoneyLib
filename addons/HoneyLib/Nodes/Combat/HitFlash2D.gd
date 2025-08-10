@@ -2,12 +2,18 @@ tool
 class_name HitFlash2D
 extends Component2D
 
+signal flash_started()
+signal flash_ended()
+signal flash_interrupted()
+signal damage_flash(amount, source, reason)
+
 const CATEGORY_NAME := "HitFlash2D"
 const PROPERTY_FLASH_COLOR := "flash_color"
 const PROPERTY_FLASH_DURATION := "flash_duration"
 
-const SHADER_PARAM_FLASH_INTENSITY := "shader_param/flash_intensity"
+const SHADER_PARAM_FLASH_MODIFIER_PREFIX := "shader_param/flash_modifier"
 const SHADER_PARAM_FLASH_COLOR := "shader_param/flash_color"
+const SHADER_PARAM_FLASH_MODIFIER := "flash_modifier"
 
 const FLASH_INTENSITY_START := 0.0
 const FLASH_INTENSITY_PEAK := 1.0
@@ -36,6 +42,7 @@ func _connect_health_stats() -> void:
 
 func _on_HealthStats_damage_taken(amount: int, source: Node, reason: String) -> void:
 	trigger_flash()
+	emit_signal("damage_flash", amount, source, reason)
 
 
 func trigger_flash() -> void:
@@ -46,12 +53,30 @@ func trigger_flash() -> void:
 		get_flash_tween().kill()
 	mat.set_shader_param(SHADER_PARAM_FLASH_COLOR, get_flash_color())
 	set_flash_tween(create_tween())
-	get_flash_tween().tween_property(mat, SHADER_PARAM_FLASH_INTENSITY, FLASH_INTENSITY_START, get_flash_duration()).from(FLASH_INTENSITY_PEAK)
+	get_flash_tween().tween_callback(self, "emit_signal", ["flash_started"])
+	get_flash_tween().tween_property(mat, SHADER_PARAM_FLASH_MODIFIER_PREFIX, FLASH_INTENSITY_START, get_flash_duration()).from(FLASH_INTENSITY_PEAK)
+	get_flash_tween().tween_callback(self, "emit_signal", ["flash_ended"])
+
+
+func flash_with_color(color: Color,duration: float) -> void:
+	set_flash_color(color)
+	set_flash_duration(duration)
+
+
+func stop_flash() -> void:
+	if get_flash_tween() != null:
+		get_flash_tween().kill()
+	emit_signal("flash_interrupted")
+	get_flash_material().set(SHADER_PARAM_FLASH_MODIFIER_PREFIX, FLASH_INTENSITY_START)
+
+
+func is_flashing() -> bool:
+	return get_flash_tween() != null and get_flash_tween().is_running() == true
 
 
 func get_flash_material() -> Material:
 	var mat := get_material()
-	if mat != null and mat is ShaderMaterial and mat.shader.has_param(SHADER_PARAM_FLASH_INTENSITY):
+	if mat != null and mat.shader.has_param(SHADER_PARAM_FLASH_MODIFIER):
 		return mat
 	return null
 
