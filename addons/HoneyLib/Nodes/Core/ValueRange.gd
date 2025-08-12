@@ -29,37 +29,26 @@ const MIN_STEP := 0.0001
 
 ## Minimum allowed value.
 var min_value := 0.0 setget set_min_value,get_min_value
-
 ## Maximum allowed value.
 var max_value := 100.0 setget set_max_value,get_max_value
-
 ## Step increment/decrement amount.
 var step := 1.0 setget set_step,get_step
-
 ## Page increment/decrement amount, usually larger than step.
 var page := 0.0 setget set_page,get_page
-
 ## Enable exponential editing (reserved for future use).
 var exp_edit := false setget set_exp_edit,get_exp_edit
-
 ## Round values to nearest integer if true.
 var rounded := false setget set_rounded,is_rounded
-
 ## Allow value to exceed maximum if true.
 var allow_greater := false setget set_allow_greater,is_allow_greater
-
 ## Allow value to go below minimum if true.
 var allow_lesser := false setget set_allow_lesser,is_allow_lesser
-
 ## Enable automatic regeneration.
 var regenerate := false setget set_regenerate,can_regenerate
-
 ## Time interval between regeneration ticks (seconds).
 var regen_interval := 1.0 setget set_regen_interval,get_regen_interval
-
 ## Amount recovered each regeneration tick.
 var regen_step := 0.1 setget set_regen_step,get_regen_step
-
 ## Current value of the range.
 var value := EMPTY_VALUE setget set_value,get_value
 
@@ -89,16 +78,20 @@ func increase_page(reason: String = CauseType.PAGE_INCREASE) -> void:
 	else:
 		increase(get_step(), reason)
 
+## Decrease value by the configure page amount if > MIN_STEP, else step amount.
+func decrease_page(reason: String = CauseType.PAGE_DECREASE) -> void:
+	if get_page() > MIN_STEP:
+		decrease(get_page(), reason)
+	else:
+		decrease(get_step(), reason)
 
 ## Increase valye by the configured step amount.
 func increase_step(reason: String = CauseType.STEP_INCREASE) -> void:
 	increase(get_step(), reason)
 
-
 ## Decrease value by the configured step amount.
 func decrease_step(reason: String = CauseType.STEP_DECREASE) -> void:
 	decrease(get_step(), reason)
-
 
 ## Decrease the current value by the specified amount.
 func decrease(amount: float, reason: String = CauseType.DECREASE_VALUE) -> void:
@@ -116,7 +109,8 @@ func set_value(new_value: float,reason: String = CauseType.CHANGED_VALUE) -> voi
 		new_value = round(new_value)
 	value = new_value
 	var old_value := get_value()
-	if old_value != value:
+	
+	if is_changed(get_value()):
 		emit_signal("changed", old_value, get_value(), reason)
 	elif get_value() < old_value:
 		emit_signal("increased", old_value, get_value(), reason)
@@ -130,6 +124,17 @@ func set_value(new_value: float,reason: String = CauseType.CHANGED_VALUE) -> voi
 func is_empty() -> bool:
 	return get_value() <= get_min_value()
 
+## Check if value changed.
+func is_changed(new_value: int) -> bool:
+	return get_value() != new_value
+
+## Check if current amount is greater than given value.
+func is_above(new_value: int) -> bool:
+	return get_value() > new_value
+
+## Check if current amount is less than given value.
+func is_below(new_value: int) -> bool:
+	return get_value() < new_value
 
 ## Returns true if current value is at or above maximum.
 func is_full() -> bool:
