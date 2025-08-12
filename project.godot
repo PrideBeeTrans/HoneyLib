@@ -89,7 +89,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Resources/Physics/GravitySettings.gd"
 }, {
-"base": "ValueResource",
+"base": "ValueRange",
 "class": "HealthStats",
 "language": "GDScript",
 "path": "res://addons/HoneyLib/Nodes/Combat/HealthStats.gd"
@@ -210,9 +210,9 @@ _global_script_classes=[ {
 "path": "res://addons/HoneyLib/Nodes/System/TraitSystem.gd"
 }, {
 "base": "Component",
-"class": "ValueResource",
+"class": "ValueRange",
 "language": "GDScript",
-"path": "res://addons/HoneyLib/Nodes/Core/ValueResource.gd"
+"path": "res://addons/HoneyLib/Nodes/Core/ValueRange.gd"
 } ]
 _global_script_class_icons={
 "Aim2D": "res://addons/HoneyLib/Icons/Logic/Aim2D.svg",
@@ -255,7 +255,7 @@ _global_script_class_icons={
 "StateMachine": "res://addons/HoneyLib/Icons/System/StateMachine.svg",
 "TraitBase": "",
 "TraitSystem": "",
-"ValueResource": ""
+"ValueRange": ""
 }
 
 [application]

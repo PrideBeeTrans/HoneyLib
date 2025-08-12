@@ -1,10 +1,10 @@
 ## HealthStats.gd
-## A specialized ValueResource for managing health, including taking damage, healing,
+## A specialized ValueRange for managing health, including taking damage, healing,
 ## and syncing with a starting stats resource.
 
 tool
 class_name HealthStats,"res://addons/HoneyLib/Icons/Combat/HealthStats.svg"
-extends ValueResource
+extends ValueRange
 
 const RESET_ON_CHANGE := true
 const KEEP_CURRENT_HEALTH := false

@@ -10,9 +10,15 @@ const RESTORE_HEALTH := "restore_health"
 const SET_HEALTH := "set_health"
 const SET_MAX_HEALTH := "set_max_health"
 
-## Value Resource Causes
-const INCREASE_AMOUNT := "increase"
-const DECREASE_AMOUNT := "decrease"
-const RESET_AMOUNT := "reset"
+## Value Range Causes
+const INCREASE_VALUE := "increase"
+const DECREASE_VALUE := "decrease"
+const RESET_VALUE := "reset"
 const MAX_ADJUST := "max_adjust"
-const CHANGED_AMOUNT := "changed"
+const CHANGED_VALUE := "changed"
+
+const STEP_INCREASE := "step_increase"
+const STEP_DECREASE := "step_decrease"
+
+const PAGE_INCREASE := "page_increase"
+const PAGE_DECREASE := "page_decrease"
