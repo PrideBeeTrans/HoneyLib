@@ -98,6 +98,11 @@ func decrease(amount: float, reason: String = CauseType.DECREASE_VALUE) -> void:
 	if get_value() <= 0:
 		return
 	set_value(get_value() - amount, reason)
+
+
+## Set the amount to max.
+func reset(reason := CauseType.RESET_VALUE) -> void:
+	set_value(get_max_value(), reason)
 	
 	
 func set_value(new_value: float,reason: String = CauseType.CHANGED_VALUE) -> void:
@@ -151,16 +156,18 @@ func get_value() -> float:
 	return value
 
 
-func set_min_value(value: float) -> void:
+func set_min_value(value: float,reason: String = CauseType.MIN_ADJUST) -> void:
 	min_value = value
+	emit_signal("min_changed", get_min_value(), reason)
 
 
 func get_min_value() -> float:
 	return min_value
 
 
-func set_max_value(value: float) -> void:
+func set_max_value(value: float,reason: String = CauseType.MAX_ADJUST) -> void:
 	max_value = value
+	emit_signal("max_changed", get_max_value(), reason)
 
 
 func get_max_value() -> float:
@@ -240,7 +247,7 @@ func can_regenerate() -> bool:
 
 
 func _set(property: String, value) -> bool:
-	if property == "can_regenerate":
+	if property == "can_regenerate" and value != null:
 		set_regenerate(value)
 		return true
 	return false

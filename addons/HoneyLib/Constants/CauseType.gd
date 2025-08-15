@@ -15,6 +15,7 @@ const INCREASE_VALUE := "increase"
 const DECREASE_VALUE := "decrease"
 const RESET_VALUE := "reset"
 const MAX_ADJUST := "max_adjust"
+const MIN_ADJUST := "min_adjust"
 const CHANGED_VALUE := "changed"
 
 const STEP_INCREASE := "step_increase"

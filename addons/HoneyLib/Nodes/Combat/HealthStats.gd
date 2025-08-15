@@ -16,7 +16,7 @@ signal healed(amount, source, reason)
 ## Optional resource used to initialize health values.
 var starting_stats : Resource setget set_starting_stats,get_starting_stats
 ## Fallback max health value if starting_stats is not assigned or invalid.
-var default_max_health := 1 setget set_default_max_health,get_default_max_health
+var default_max_health := 1.0 setget set_default_max_health,get_default_max_health
 
 
 func _ready() -> void:
@@ -67,22 +67,22 @@ func restore_full_health(reason := CauseType.RESTORE_HEALTH) -> void:
 
 ## Instantly sets the current health value.
 func set_health(amount: int, reason := CauseType.SET_HEALTH) -> void:
-	set_amount(amount, reason)
+	set_value(amount, reason)
 
 
 ## Instantly sets the maximum health value.
 func set_max_health(amount: int, reason := CauseType.SET_MAX_HEALTH) -> void:
-	set_max_amount(amount, reason)
+	set_max_value(amount, reason)
 
 
 ## Returns the current health.
-func get_health() -> int:
-	return get_amount()
+func get_health() -> float:
+	return get_value()
 
 
 ## Returns the maximum health.
-func get_max_health() -> int:
-	return get_max_amount()
+func get_max_health() -> float:
+	return get_max_value()
 
 
 ## Returns true if current health is zero.
@@ -109,11 +109,11 @@ func get_starting_stats() -> Resource:
 	return starting_stats
 
 
-func set_default_max_health(value: int) -> void:
+func set_default_max_health(value: float) -> void:
 	default_max_health = value
 
 
-func get_default_max_health() -> int:
+func get_default_max_health() -> float:
 	return default_max_health
 
 
@@ -132,6 +132,10 @@ func _validate_starting_stats() -> void:
 	
 	if get_starting_stats() == null:
 		push_warning("HealthStats: No starting_stats assigned. Falling back to default_max_health.")
+		set_health(get_base_max_health())
+	else:
+		set_max_health(get_base_max_health())
+		set_health(get_max_health())
 
 
 func _get_configuration_warning() -> String:
